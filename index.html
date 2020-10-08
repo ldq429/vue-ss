@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,23 @@
     <title>vue-ss</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
+
 <body>
-    <div id="root"></div>
+    <div id="root">
+        {{msg}}
+    </div>
     <script>
-        
+        const vm = new Vue({
+            el: '#root', // 控制某一个容器，也可以叫做模板
+            data: {
+                msg: '杉杉老师'
+            }
+        })
+
+        // 还可以让vue延迟挂载： $mount
+        // vm.$mount('#root')
+    
     </script>
 </body>
+
 </html>
